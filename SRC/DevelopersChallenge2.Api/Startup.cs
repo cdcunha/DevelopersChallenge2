@@ -30,7 +30,21 @@ namespace DevelopersChallenge2.Api
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DevelopersChallenge2.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo 
+                { 
+                    Title = "DevelopersChallenge2.Api", 
+                    Version = "v1",
+                    Description = "API for the Nibo Developer's Challenge",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Charlestown Dias da Cunha",
+                        Email = "cdcunha@gmail.com",
+                        Url = new Uri("https://www.linkedin.com/in/charlestowndc/"),
+                    }
+                });
+                var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var filePath = System.IO.Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(filePath);
             });
         }
 

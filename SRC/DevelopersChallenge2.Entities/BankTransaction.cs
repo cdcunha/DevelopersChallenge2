@@ -4,15 +4,36 @@ using System.Collections.Generic;
 
 namespace DevelopersChallenge2.Entities
 {
+    /// <summary>
+    /// Bank Transaction
+    /// </summary>
     public class BankTransaction
     {
+        /// <summary>
+        /// Transaction's Type: Debit or Credit are the valid values
+        /// </summary>
         public TypeTransaction Type { get; set; }
+
+        /// <summary>
+        /// Transaction's Posted Date
+        /// </summary>
         public DateTime Posted { get; set; }
+
+        /// <summary>
+        /// Transaction's Amount
+        /// </summary>
         public decimal Amount { get; set; }
+
+        /// <summary>
+        /// Transaction's Memo
+        /// </summary>
         public string Memo { get; set; }
     }
 
-    sealed class BankTransactionEqualityComparer : IEqualityComparer<BankTransaction>
+    /// <summary>
+    /// Class responsable to make the comparations between two BankTransaction objects
+    /// </summary>
+    public class BankTransactionEqualityComparer : IEqualityComparer<BankTransaction>
     {
         public bool Equals(BankTransaction x, BankTransaction y)
         {

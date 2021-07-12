@@ -1,19 +1,17 @@
 ﻿using DevelopersChallenge2.Entities;
 using DevelopersChallenge2.Helper;
-using Microsoft.AspNetCore.Hosting;
+//using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 
 namespace DevelopersChallenge2.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     /// <summary>
     /// Controller responsible for all imports

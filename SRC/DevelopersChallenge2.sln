@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevelopersChallenge2.Helper
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevelopersChallenge2.Tests", "DevelopersChallenge2.Tests\DevelopersChallenge2.Tests.csproj", "{33200612-E71C-4EB4-A3AF-E4B71034588F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopersChallenge2.Entities", "DevelopersChallenge2.Entities\DevelopersChallenge2.Entities.csproj", "{7A9CF406-0873-4ABA-BCE6-FA25A7C6A09B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevelopersChallenge2.Entities", "DevelopersChallenge2.Entities\DevelopersChallenge2.Entities.csproj", "{7A9CF406-0873-4ABA-BCE6-FA25A7C6A09B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopersChallenge2.Blazor", "DevelopersChallenge2.Blazor\DevelopersChallenge2.Blazor.csproj", "{D29B79F9-C53B-4830-BA5F-1BA5E69496E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{7A9CF406-0873-4ABA-BCE6-FA25A7C6A09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A9CF406-0873-4ABA-BCE6-FA25A7C6A09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A9CF406-0873-4ABA-BCE6-FA25A7C6A09B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29B79F9-C53B-4830-BA5F-1BA5E69496E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29B79F9-C53B-4830-BA5F-1BA5E69496E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29B79F9-C53B-4830-BA5F-1BA5E69496E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29B79F9-C53B-4830-BA5F-1BA5E69496E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,17 @@
+﻿<div class="alert alert-secondary mt-4" role="alert">
+    <span class="oi oi-bookmark mr-2" aria-hidden="true"></span>
+    <strong>@Title</strong>
+
+    <p>Name: Charlestown</p>
+    <span class="text-nowrap">
+        E-mail: 
+        <a target="_blank" class="font-weight-bold" href="mailto:cdcunha@gmail.com">cdcunha@gmail.com</a>
+    </span>
+    <p>Website: <a href="https://www.linkedin.com/in/charlestowndc/">https://www.linkedin.com/in/charlestowndc</a></p>
+</div>
+
+@code {
+    // Demonstrates how a parent component can supply parameters
+    [Parameter]
+    public string Title { get; set; }
+}
