@@ -1,0 +1,77 @@
+﻿using DevelopersChallenge2.Helper;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace DevelopersChallenge2.Tests.Helper
+{
+    [TestClass()]
+    public class OfxHelperTests
+    {
+        [TestMethod()]
+        public void OfxToDataSetTest()
+        {
+            const string ofxData = @"OFXHEADER:100
+DATA:OFXSGML
+VERSION:102
+SECURITY:NONE
+ENCODING:USASCII
+CHARSET:1252
+COMPRESSION:NONE
+OLDFILEUID:NONE
+NEWFILEUID:NONE
+
+<OFX>
+<SIGNONMSGSRSV1>
+<SONRS>
+<STATUS>
+<CODE>0
+<SEVERITY>INFO
+</STATUS>
+<DTSERVER>20140318100000[-03:EST]
+<LANGUAGE>POR
+</SONRS>
+</SIGNONMSGSRSV1>
+<BANKMSGSRSV1>
+<STMTTRNRS>
+<TRNUID>1001
+<STATUS>
+<CODE>0
+<SEVERITY>INFO
+</STATUS>
+<STMTRS>
+<CURDEF>BRL
+<BANKACCTFROM>
+<BANKID>0341
+<ACCTID>7037300576
+<ACCTTYPE>CHECKING
+</BANKACCTFROM>
+<BANKTRANLIST>
+<DTSTART>20140201100000[-03:EST]
+<DTEND>2014020100000[-03:EST]
+<STMTTRN>
+<TRNTYPE>DEBIT
+<DTPOSTED>20140203100000[-03:EST]
+<TRNAMT>-140.00
+<MEMO>CXE     001958 SAQUE    
+</STMTTRN>
+<STMTTRN>
+<TRNTYPE>DEBIT
+<DTPOSTED>20140204100000[-03:EST]
+<TRNAMT>-102.19
+<MEMO>RSHOP-SUPERMERCAD-03/02 
+</STMTTRN>
+</BANKTRANLIST>
+<LEDGERBAL>
+<BALAMT>-4021.44
+<DTASOF>20140318100000[-03:EST]
+</LEDGERBAL>
+</STMTRS>
+</STMTTRNRS>
+</BANKMSGSRSV1>
+</OFX>";
+            //OfxHelper ofxHelper = new();
+            var result = OfxHelper.OfxToBankTransactions(ofxData);
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Count == 2);
+        }
+    }
+}
